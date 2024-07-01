@@ -34,7 +34,7 @@ const DisclaimersPop = ({ onClick }) => {
                 found &nbsp;
                 <a
                     className="purple bold"
-                    href="/"
+                    href="https://alexisdecicco.com"
                     onClick={(e) => e.stopPropagation()}
                 >
                     here.
