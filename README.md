@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Set
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Set is (currently) a desktop only React game is based on The Set® Card Game, which I love to play with friends and family whenever I get the opportunity. The reason for choosing this project was two-fold, it's something I'm personally pasisonate about, and also an excellent way to gain experience managing variables and the algorithms that go with them. It is worth noting that this project is strictly that; I have no intentions on making money from this game, or am in any way trying to take credit for the idea. If you like my project, please consider checking out The Set® Card Game, owned by Set Enterprises, Inc., a part of PlayMonster LLC.
 
-## Available Scripts
+## Goals
 
-In the project directory, you can run:
+My goal for this project was to make the cards customizable, which proved much more difficult than I was expecting. Players can change the card's shape, pattern, and color during the game without losing progress. Games are also a great way to try and solve a variety of interesting design challenges, and this project certainly had a few.
 
-### `npm start`
+## Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- To allow the player to customize the cards, I wrote the deck object to display the cards relative to 3 array indices of the user data.
+- Each shape and pattern was custom made by me, all to work with a constant size viewbox in an SVG React component.
+- I ended up using SVGs since they are the only format that can accept stroke and fill color values at runtime without the use of CSS filters.
+- The shapes are stored as SVG <path> strings, the patterns as SVG <patterns> which inserted using JSX, and the colors in hex.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Next Steps
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As I have learned more about SVGs, I've found them to be incredibly versatile, particularly relative to client inputs. But they are also kind of a pain, Safari has given me a lot of compatability issues that I am still working to resolve. Going forward, I want to add a multiplayer option so I can play online with my family and a database to store user customizations and game statistics.
